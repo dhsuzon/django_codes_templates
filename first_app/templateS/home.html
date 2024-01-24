@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>this is home page</h1>
+    <h2>author: {{author}}</h2>
+    <h2>age: {{age}}</h2>
+    <h2>list: {{list}}</h2>
+    <h1>{{ list | join:'_ '}}</h1>
+    <h1>{{ brithday | date:"D d M Y" }}</h1>
+   {{ "Python is Fun" | cut:" "}}
+
+    <!-- conditional statement -->
+    {% if age >= 20 %}
+    <h1>you will get driving lincense</h1>
+    {% elif age >= 10 and age <= 19%}
+    <p>you will not get driving linsense</p>
+    {% else%}
+    <h1>you`r a child</h1>
+
+    {% endif%} {% comment %} for loop {% endcomment %} {% for i in courses%}
+    <h3>{{i.id}} {{i.name}} {{i.fee}}</h3>
+    {%endfor%}
+  </body>
+</html>
